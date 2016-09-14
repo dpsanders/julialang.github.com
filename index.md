@@ -129,8 +129,8 @@ Instead, it provides a number of [key building blocks for distributed computatio
 The following simple example demonstrates how to count the number of heads in a large number of coin tosses in parallel.
 
 {% highlight julia %}
-nheads = @parallel (+) for i=1:100000000
-  int(randbool())
+nheads = @parallel (+) for i=1:10^8
+  rand(Bool)
 end
 {% endhighlight %}
 
