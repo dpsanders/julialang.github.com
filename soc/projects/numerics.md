@@ -165,6 +165,23 @@ This may involve developing code for McCormick relaxations and/or affine arithme
 **Mentors:** [David P. Sanders](https://github.com/dpsanders)
 
 
+## Taylor models and a guaranteed ODE solver
+
+Combining interval arithmetic and Taylor series, it is possible to
+write an integrator for ordinary differential equations (ODEs) that gives results that are guaranteed (rigorous), i.e. we get a tube that is guaranteed to contain the true solution of the ODE.
+
+The groundwork has been laid, but the project will require reading papers on the subject and experimenting with different implementations for performance, for example using different polynomial representations.
+
+This also has applications to [reachability analysis](https://github.com/JuliaReach) of dynamical systems.
+
+**Recommended skills**: Multivariable calculus and linear algebra; understanding of floating-point arithmetic; ability to read papers and implement generic algorithms which allow to swap different libraries in and out.
+
+**Expected results**: A state-of-the-art library for Taylor models and guaranteed ODE solving.
+
+**Mentors:** [David P. Sanders](https://github.com/dpsanders), [Luis Benet](https://github.com/lbenet)
+
+
+
 # Native Bignums
 
 Julia currently supports big integers, rationals and floats, making use of the GMP and MPFR libraries. However, the current implementation is very basic, performance is far from optimal compared to hand-written GMP code, and the GMP license is GPL 3.
